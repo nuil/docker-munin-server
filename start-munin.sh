@@ -52,7 +52,7 @@ do
   if [ ${#PORT} -eq 0 ]; then
       PORT=4949
   fi
-  if ! grep -q $HOST /etc/munin/munin.conf ; then
+  if ! grep -q $NAME /etc/munin/munin.conf ; then
     cat << EOF >> /etc/munin/munin.conf
 [$NAME]
     address $HOST
@@ -72,7 +72,7 @@ do
   if [ ${#PORT} -eq 0 ]; then
       PORT=4949
   fi
-  if ! grep -q $HOST /etc/munin/munin.conf ; then
+  if ! grep -q $NAME /etc/munin/munin.conf ; then
     cat << EOF >> /etc/munin/munin.conf
 [$NAME]
     address $HOST
